@@ -528,9 +528,6 @@ class neutron::server (
       neutron_config {
         'keystone_authtoken/auth_uri': value => $auth_uri_real;
       }
-      neutron_api_config {
-        'filter:authtoken/auth_uri': value => $auth_uri_real;
-      }
 
       if $auth_region {
         neutron_config {
