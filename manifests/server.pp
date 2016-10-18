@@ -433,12 +433,6 @@ class neutron::server (
         'keystone_authtoken/admin_password':    value => $auth_password, secret => true;
       }
 
-      neutron_api_config {
-        'filter:authtoken/admin_tenant_name': value => $auth_tenant;
-        'filter:authtoken/admin_user':        value => $auth_user;
-        'filter:authtoken/admin_password':    value => $auth_password, secret => true;
-      }
-
       # if both auth_uri and identity_uri are set we skip these deprecated settings entirely
       if !$auth_uri or !$identity_uri {
 
