@@ -284,9 +284,9 @@ class neutron::server (
   $ensure_lbaas_package             = false,
   $vpnaas_agent_package             = false,
   # DEPRECATED PARAMETERS
-  $auth_host                        = 'localhost',
-  $auth_port                        = '35357',
-  $auth_protocol                    = 'http',
+  $auth_host                        = undef,
+  $auth_port                        = undef,
+  $auth_protocol                    = undef,
   $auth_admin_prefix                = false,
   $log_dir                          = undef,
   $log_file                         = undef,
