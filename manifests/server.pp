@@ -540,7 +540,7 @@ class neutron::server (
           'keystone_authtoken/identity_uri': value => $identity_uri;
         }
         neutron_api_config {
-          'filter:authtoken/identity_uri': value => $identity_uri;
+          'filter:authtoken/identity_uri': ensure => absent;
         }
       } else {
         neutron_config {
