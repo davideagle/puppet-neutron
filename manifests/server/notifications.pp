@@ -179,7 +179,7 @@ class neutron::server::notifications (
       'nova/project_domain_id': value => $project_domain_id;
       'nova/project_name':      value => $project_name;
       'nova/user_domain_id':    value => $user_domain_id;
-      'nova/tenant_name':       value => $tenant_name;
+      'nova/tenant_name':       ensure => absent;
     }
     if $tenant_id {
       neutron_config {
