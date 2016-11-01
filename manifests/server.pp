@@ -428,9 +428,9 @@ class neutron::server (
     } else {
 
       neutron_config {
-        'keystone_authtoken/admin_tenant_name': value => $auth_tenant;
-        'keystone_authtoken/admin_user':        value => $auth_user;
-        'keystone_authtoken/admin_password':    value => $auth_password, secret => true;
+        'keystone_authtoken/admin_tenant_name': ensure => absent;
+        'keystone_authtoken/admin_user':        ensure => absent;
+        'keystone_authtoken/admin_password':    ensure => absent;
       }
 
       # if both auth_uri and identity_uri are set we skip these deprecated settings entirely
